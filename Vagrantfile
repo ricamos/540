@@ -24,6 +24,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         srv.vm.network 'private_network', ip: '1.0.0.100',
           auto_config: false
       end
+<<<<<<< Updated upstream
+=======
+
+      config.vm.provider :aws do |aws, override|
+        aws.access_key_id = "AKIASIX4VFN7YDB2KQP7"
+        aws.secret_access_key = "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"
+        #aws.session_token = "SESSION TOKEN"
+        aws.keypair_name = "ricardo"
+
+        aws.region = 'sa-east-1'
+        aws.ami = "ami-02e2a5679226e293c"
+        aws.security_groups = ['default']
+
+        override.ssh.username = "ricardo"
+        override.ssh.private_key_path = "~/.ssh/id_rsa"
+      end
+      
+>>>>>>> Stashed changes
       srv.vm.provider 'virtualbox' do |vb|
         vb.name   = env['name']
         vb.memory = env['memory']
