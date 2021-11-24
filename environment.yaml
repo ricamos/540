@@ -3,8 +3,8 @@
   box: trombik/ansible-centos-7.3-x86_64
   hostname: manager
   ipaddress: 172.16.0.100
-  #memory: 3072
-  memory: 512
+  memory: 3072
+  #memory: 512
   cpus: 1
   provision: provision/ansible/manager.yaml
 
@@ -30,7 +30,7 @@
   box: trombik/ansible-ubuntu-18.04-amd64
   hostname: registry
   ipaddress: 172.16.0.103
-  #memory: 1024
-  memory: 512
+  memory: 1024
+  #memory: 512
   cpus: 1
   provision: provision/ansible/registry.yaml
