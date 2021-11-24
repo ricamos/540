@@ -4,6 +4,10 @@
   hostname: manager
   ipaddress: 172.16.0.100
   memory: 3072
+<<<<<<< HEAD
+=======
+  #memory: 512
+>>>>>>> tmp
   cpus: 1
   provision: provision/ansible/manager.yaml
 
@@ -28,5 +32,9 @@
   hostname: registry
   ipaddress: 172.16.0.103
   memory: 1024
+<<<<<<< HEAD
+=======
+  #memory: 512
+>>>>>>> tmp
   cpus: 1
   provision: provision/ansible/registry.yaml

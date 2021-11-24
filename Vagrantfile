@@ -54,6 +54,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ansible.become_user        = 'root'
         ansible.compatibility_mode = '2.0'
       end
+<<<<<<< HEAD
+=======
+
+      if env['name'] == "manager_off" || env['name'] == "worker01_off" then 
+        #srv.vm.provision "shell", inline: "echo 'Executando script' && sudo sh /vagrant/files/manager.sh"
+        srv.vm.provision "shell", path: "files/manager.sh" 
+      end
+      
+      if env['name'] == "registry" then
+        srv.vm.provision "shell", path: "files/registry.sh" 
+      end
+
+      if env['name'] == "worker02" then
+        srv.vm.provision "shell", path: "files/worker02.sh" 
+      end
+
+>>>>>>> tmp
     end
   end
 end
